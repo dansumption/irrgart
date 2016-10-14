@@ -4,20 +4,32 @@
   "description": "Labyrinth generator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ignore-pattern '**/node_modules/**/*.js' ./**/*.js",
+    "prepush": "npm run lint"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dansumption/irrgart.git"
+    "url": "https://github.com/dansumption/irrgart.git"
   },
   "keywords": [
     "labyrinth",
-    "maze"
+    "maze",
+    "irrgarten",
+    "generator"
   ],
   "author": "Dan Sumption",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dansumption/irrgart/issues"
   },
-  "homepage": "https://github.com/dansumption/irrgart#readme"
+  "homepage": "https://github.com/dansumption/irrgart#readme",
+  "devDependencies": {
+    "eslint": "^3.6.0",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0",
+    "husky": "^0.11.9"
+  }
 }
